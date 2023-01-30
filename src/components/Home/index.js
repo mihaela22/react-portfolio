@@ -8,7 +8,7 @@ import Logo from './Logo'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['i', 'h', 'a', 'e', 'l', 'a']
+  const nameArray = [' ', 'M', 'i', 'h', 'a', 'e', 'l', 'a']
   const jobArray = [
     'w',
     'e',
@@ -48,7 +48,7 @@ const Home = () => {
             <span className={`${letterClass} _13`}>I</span>
 
             <span className={`${letterClass} _14`}>'m</span>
-            <img src={LogoTitle} alt="developer" />
+            {/* <img src={LogoTitle} alt="developer" /> */}
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
