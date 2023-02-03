@@ -1,0 +1,28 @@
+{
+  "portfolio": [
+    {
+      "cover": "/portfolio/1/koplast.png",
+      "title": "Koplast Webshop",
+      "description": "Magento 2",
+      "url": "https://shop.koplast.hr/"
+    },
+    {
+      "cover": "/portfolio/1/putinja.png",
+      "title": "Putinja Portfolio",
+      "description": "Joomla",
+      "url": "http://putinja.com/en/"
+    },
+    {
+      "cover": "/portfolio/1/klim.png",
+      "title": "Znanstveno edukacijski centar Kontija",
+      "description": "HTML, PHP, Javascript",
+      "url": "https://klim-vrsar-istra.eu/"
+    },
+    {
+      "cover": "/portfolio/1/avast.png",
+      "title": "Avast Webshop",
+      "description": "Magento 2",
+      "url": "https://avast.com.hr/"
+    }
+  ]
+}

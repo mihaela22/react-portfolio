@@ -1,0 +1,18 @@
+{
+  "portfolio": [
+    {
+      "cover": "/portfolio/1/foodOrderApp.png",
+      "title": "Food order app",
+      "description": "React.js",
+      "url": "https://jolly-starlight-fd6d9d.netlify.app/",
+      "githubUrl": "https://github.com/mihaela22/FoodOrderApp"
+    },
+    {
+      "cover": "/portfolio/1/tracker.png",
+      "title": "Expense tracker",
+      "description": "React.js",
+      "url": "https://gorgeous-snickerdoodle-fad5b8.netlify.app/",
+      "githubUrl": "https://github.com/mihaela22/Expenses-Tracker"
+    }
+  ]
+}
