@@ -52,7 +52,6 @@ const Portfolio = () => {
             )
           })}
         </div>
-        <h2></h2>
       </>
     )
   }

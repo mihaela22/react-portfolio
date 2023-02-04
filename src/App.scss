@@ -3,6 +3,7 @@ $primary-color: #ffd700;
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
 @import 'loaders.css/src/animations/ball-clip-rotate-multiple.scss';
+@import '~video-react/styles/scss/video-react'; // or import scss
 
 @font-face {
   font-family: 'Helvetica Neue';

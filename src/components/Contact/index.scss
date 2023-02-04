@@ -79,6 +79,10 @@
   width: 53%;
   height: 115%;
   margin-top: -3%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .leaflet-container {
@@ -126,4 +130,8 @@
   .info-map {
     display: none;
   }
+}
+
+.video-react-control-bar {
+  display: none !important;
 }

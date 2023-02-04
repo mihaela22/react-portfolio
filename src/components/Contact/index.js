@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+//import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
+// import dronVideo from '../../assets/video/DJI_0499.mp4'
 import './index.scss'
+import { Player } from 'video-react'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -97,14 +99,23 @@ const Contact = () => {
           <span>mihaela.staraj@gmail.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer center={[45.34, 14.1158]} zoom={13}>
+          {/* <MapContainer center={[45.34, 14.1158]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[45.34, 14.1158]}>
               <Popup>
                 Mihaela lives here, come over for a cup of coffee :)
               </Popup>
             </Marker>
-          </MapContainer>
+          </MapContainer> */}
+          <Player
+            autoPlay={true}
+            muted={true}
+            loop
+            // playsInline
+            controls={false}
+            height={100}
+            src="https://homothermal-particl.000webhostapp.com/images/DJI_0499.mp4"
+          />
         </div>
       </div>
       <Loader type="pacman" />
