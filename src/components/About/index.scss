@@ -81,6 +81,11 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .container.about-page {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
   .stage-cube-cont {
     position: initial;
     width: 100%;
