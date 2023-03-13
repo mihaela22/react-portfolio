@@ -7,9 +7,11 @@ import AnimatedLetters from '../AnimatedLetters'
 // import dronVideo from '../../assets/video/DJI_0499.mp4'
 import './index.scss'
 import { Player } from 'video-react'
+import { Typewriter } from 'react-simple-typewriter'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [typewriter, setTypwriter] = useState(false)
   const form = useRef()
   useEffect(() => {
     let timeoutId = setTimeout(() => {
@@ -25,10 +27,15 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'service_1fwdyz5', form.current, 'service_1fwdyz5')
+      .sendForm(
+        'service_1fwdyz5',
+        'template_sf5a8yv',
+        form.current,
+        'TvEp-29-WqSUmULQQ'
+      )
       .then(
         () => {
-          alert('Message successfully sent!')
+          //alert('Message successfully sent!')
           window.location.reload(false)
         },
         () => {
@@ -36,16 +43,32 @@ const Contact = () => {
         }
       )
   }
+  const handleDone = () => {
+    setTypwriter(true)
+  }
 
   return (
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>
+          {/* <h1>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
               idx={15}
+            />
+          </h1> */}
+          <h1>
+            {' '}
+            <Typewriter
+              words={['', 'Contact me']}
+              cursor={!typewriter}
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              onLoopDone={handleDone}
+              // onType={handleType}
             />
           </h1>
           <p>

@@ -50,3 +50,10 @@ textarea {
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+html {
+  cursor: url('../public/cursors/paint_arrow.png'), pointer;
+}
+a:hover,
+button:hover {
+  cursor: url('../public/cursors/paint_arrow.png'), pointer;
+}

@@ -10,10 +10,13 @@ import {
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { Typewriter } from 'react-simple-typewriter'
 import './index.scss'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [typewriter, setTypwriter] = useState(false)
 
   useEffect(() => {
     let timeoutId = setTimeout(() => {
@@ -24,29 +27,48 @@ const About = () => {
     }
   }, [])
 
+  const handleDone = () => {
+    setTypwriter(true)
+  }
+
   return (
     <>
       <div className="container about-page">
         <div className="text-zone">
-          <h1>
+          {/* <h1>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
               idx={15}
             />
+          </h1> */}
+          <h1>
+            {' '}
+            <Typewriter
+              words={['', 'About me']}
+              cursor={!typewriter}
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              onLoopDone={handleDone}
+              // onType={handleType}
+            />
           </h1>
+
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            I am a creative perfectionist with a passion for front-end. I am
+            excited to bring my skills and creativity to a company where I can
+            can continue to grow my skills and develop beautiful, innovative and
+            user-friendly interfaces.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            I am enthusiastic about joining an ambitious team that leverages the
+            latest technologies to tackle interesting projects.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a sports
-            fanatic, photography enthusiast, and tech-obsessed!!!
+            When I'm not coding, you can find me exploring the great outdoors
+            with my camera in hand.
           </p>
         </div>
 

@@ -5,9 +5,11 @@ import portfolioDataProjects from '../../data/portfolio.json'
 import portfolioDataReact from '../../data/portfolioReact.json'
 import './index.scss'
 import RenderPortfolio from './RenderPortfolio'
+import { Typewriter } from 'react-simple-typewriter'
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [typewriter, setTypwriter] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -18,15 +20,30 @@ const Portfolio = () => {
       clearTimeout(timer)
     }
   })
-
+  const handleDone = () => {
+    setTypwriter(true)
+  }
   return (
     <>
       <div className="container portfolio-page">
-        <h1 className="page-title">
+        {/* <h1 className="page-title">
           <AnimatedLetters
             letterClass={letterClass}
             strArray={'Portfolio'.split('')}
             idx={15}
+          />
+        </h1> */}
+        <h1 className="page-title">
+          {' '}
+          <Typewriter
+            words={['', 'Portfolio']}
+            cursor={!typewriter}
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            // onType={handleType}
           />
         </h1>
         <RenderPortfolio

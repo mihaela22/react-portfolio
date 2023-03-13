@@ -1,11 +1,11 @@
 .logo-container {
   z-index: 0;
-  width: 400px;
+  width: 600px;
   height: 609px;
   opacity: 0;
   position: absolute;
   top: 0;
-  right: 15%;
+  right: 20%;
   bottom: 0;
   left: auto;
   margin: auto;
@@ -29,11 +29,18 @@
     transform: rotateZ(30deg) !important;
     z-index: 1;
   }
+  img {
+    display: none;
+  }
 }
 
 .svg-container {
   stroke: #ffd700;
   stroke-width: 10;
+}
+#canvas1 {
+  background: rgba(51, 30, 101, 0);
+  position: absolute;
 }
 
 @media screen and (max-width: 1200px) {
