@@ -1,27 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Loader from 'react-loaders'
 //import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import AnimatedLetters from '../AnimatedLetters'
+//import AnimatedLetters from '../AnimatedLetters'
 // import dronVideo from '../../assets/video/DJI_0499.mp4'
 import './index.scss'
 import { Player } from 'video-react'
 import { Typewriter } from 'react-simple-typewriter'
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  //const [letterClass, setLetterClass] = useState('text-animate')
   const [typewriter, setTypwriter] = useState(false)
   const form = useRef()
-  useEffect(() => {
-    let timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
+  // useEffect(() => {
+  //   let timeoutId = setTimeout(() => {
+  //     setLetterClass('text-animate-hover')
+  //   }, 4000)
 
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
+  //   return () => {
+  //     clearTimeout(timeoutId)
+  //   }
+  // }, [])
 
   const sendEmail = (e) => {
     e.preventDefault()

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import {
   faAngular,
   faCss3,
@@ -8,24 +8,24 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
+//import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { Typewriter } from 'react-simple-typewriter'
 import './index.scss'
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  // const [letterClass, setLetterClass] = useState('text-animate')
   const [typewriter, setTypwriter] = useState(false)
 
-  useEffect(() => {
-    let timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
+  // useEffect(() => {
+  //   let timeoutId = setTimeout(() => {
+  //     setLetterClass('text-animate-hover')
+  //   }, 3000)
+  //   return () => {
+  //     clearTimeout(timeoutId)
+  //   }
+  // }, [])
 
   const handleDone = () => {
     setTypwriter(true)

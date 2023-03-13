@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
+//import AnimatedLetters from '../AnimatedLetters'
 import portfolioDataProjects from '../../data/portfolio.json'
 import portfolioDataReact from '../../data/portfolioReact.json'
 import './index.scss'
@@ -8,18 +8,18 @@ import RenderPortfolio from './RenderPortfolio'
 import { Typewriter } from 'react-simple-typewriter'
 
 const Portfolio = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  //const [letterClass, setLetterClass] = useState('text-animate')
   const [typewriter, setTypwriter] = useState(false)
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLetterClass('text-animate-hover')
+  //   }, 3000)
 
-    return () => {
-      clearTimeout(timer)
-    }
-  })
+  //   return () => {
+  //     clearTimeout(timer)
+  //   }
+  // })
   const handleDone = () => {
     setTypwriter(true)
   }
